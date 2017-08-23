@@ -117,6 +117,8 @@ namespace HSVColorPicker
             if (hsvImg == null) return;
             Cv2.InRange(hsvImg, lowerColor, upperColor, dstImg);
             dstImage.Source = dstImg.ToWriteableBitmap();
+            Cv2.ImWrite(Environment.CurrentDirectory+"\\save.jpg", dstImg);
+
         }
 
     }
