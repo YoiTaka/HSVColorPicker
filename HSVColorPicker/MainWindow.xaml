@@ -1,0 +1,161 @@
+﻿<Window
+    x:Class="HSVColorPicker.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HSVColorPicker"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="525"
+    Height="350"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Margin="0,5,0,187" Orientation="Horizontal">
+            <Button
+                Margin="10,0,50,0"
+                Click="Button_Click"
+                Content="OPEN" />
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom">H_MinValue</TextBlock>
+                <TextBlock
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    S_MinValue
+                </TextBlock>
+                <TextBlock
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    V_MinValue
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Slider
+                    x:Name="H_Min_Slider"
+                    Width="100"
+                    Margin="8,0,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="H_Min"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+
+                <Slider
+                    x:Name="S_Min_Slider"
+                    Width="100"
+                    Margin="8,35,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="S_Min"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+
+                <Slider
+                    x:Name="V_Min_Slider"
+                    Width="100"
+                    Margin="12,30,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="V_Min"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+            </StackPanel>
+
+
+            <StackPanel Margin="10,0,0,0" Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom">H_MaxValue</TextBlock>
+                <TextBlock
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    S_MaxValue
+                </TextBlock>
+                <TextBlock
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    V_MaxValue
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <Slider
+                    x:Name="H_Max_Slider"
+                    Width="100"
+                    Margin="8,0,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="H_Max"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+
+                <Slider
+                    x:Name="S_Max_Slider"
+                    Width="100"
+                    Margin="8,35,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="S_Max"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+
+                <Slider
+                    x:Name="V_Max_Slider"
+                    Width="100"
+                    Margin="8,30,0,0"
+                    VerticalAlignment="Top"
+                    Maximum="255"
+                    Minimum="0"
+                    Tag="V_Max"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    ValueChanged="Slider_HandValueChanged" />
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Image
+            x:Name="srcImage"
+            Width="150"
+            Height="150"
+            Margin="184,156,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Image
+            x:Name="dstImage"
+            Width="150"
+            Height="150"
+            Margin="346,156,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Label
+            x:Name="HValueRange"
+            Margin="10,183,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="H:" />
+        <Label
+            x:Name="SValueRange"
+            Margin="10,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="S:" />
+        <Label
+            x:Name="VValueRange"
+            Margin="10,242,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="V:" />
+
+
+    </Grid>
+
+
+</Window>
